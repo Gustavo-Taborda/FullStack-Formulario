@@ -4,6 +4,10 @@ GitHub para atividade de desenvolvimento de Formulários para a Disciplina de Fu
 
 > Este README foi gerado com o apoio de uma IA (Claude, da Anthropic).
 
+# Link para Página Web
+
+https://gustavo-taborda.github.io/FullStack-Formulario/
+
 ## Sobre o projeto
 
 Aplicação simples em HTML, CSS e JavaScript que recebe o nome e as 4 notas de um aluno, calcula a média automaticamente enquanto o usuário digita, e ao final exibe em uma segunda página o resultado do aluno (Aprovado, Exame ou Reprovado).
