@@ -25,7 +25,7 @@ Aplicação simples em HTML, CSS e JavaScript que recebe o nome e as 4 notas de 
 ├── Form.html      # Página do formulário
 ├── result.html    # Página de resultado
 ├── Script.js      # Lógica de cálculo, eventos e navegação
-├── style.css       # Estilos compartilhados entre as duas páginas
+├── style.css      # Estilos compartilhados entre as duas páginas
 └── README.md
 ```
 
