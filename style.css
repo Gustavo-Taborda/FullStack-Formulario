@@ -1,0 +1,174 @@
+/* Paleta: tons gelo/azul-claro para fundo, azul mais forte para destaque */
+:root {
+    --gelo: #eef4fa;
+    --gelo-claro: #f8fbfe;
+    --card: #ffffff;
+    --azul: #2f6fed;
+    --azul-escuro: #1c4fc7;
+    --azul-suave: #dce8fb;
+    --texto: #1f2b3a;
+    --texto-suave: #5b6b80;
+    --borda: #d8e4f2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(180deg, var(--gelo-claro) 0%, var(--gelo) 100%);
+    color: var(--texto);
+}
+
+.cartao {
+    width: 100%;
+    max-width: 380px;
+    background: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    padding: 32px 28px;
+    box-shadow: 0 10px 30px -14px rgba(28, 79, 199, 0.25);
+}
+
+.cartao h1,
+.cartao h2 {
+    margin: 0 0 4px 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--texto);
+}
+
+.subtitulo {
+    margin: 0 0 24px 0;
+    font-size: 14px;
+    color: var(--texto-suave);
+}
+
+.campo {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--texto-suave);
+}
+
+.campo input {
+    padding: 10px 12px;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    font-size: 15px;
+    background: var(--gelo-claro);
+    color: var(--texto);
+}
+
+.campo input:focus {
+    outline: none;
+    border-color: var(--azul);
+    background: #ffffff;
+    box-shadow: 0 0 0 3px var(--azul-suave);
+}
+
+.notas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 16px;
+}
+
+button {
+    width: 100%;
+    margin-top: 8px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: var(--azul);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--azul-escuro);
+}
+
+.resultado-caixa {
+    margin-top: 20px;
+    padding: 14px 16px;
+    border-radius: 8px;
+    background: var(--azul-suave);
+    border: 1px solid var(--borda);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--azul-escuro);
+    min-height: 20px;
+}
+
+/* Página de resultado: coluna de info (nome/média) ao lado + resultado grande e centralizado */
+.cartao-resultado {
+    max-width: 520px;
+}
+
+.resultado-layout {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 16px;
+}
+
+.info-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+    flex-shrink: 0;
+}
+
+.resultado-nome,
+.resultado-media {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--texto-suave);
+    margin: 0;
+}
+
+.resultado-destaque {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px 12px;
+    border-radius: 10px;
+    background: var(--azul-suave);
+    border: 1px solid var(--borda);
+}
+
+.resultado {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--azul-escuro);
+    margin: 0;
+}
+
+@media (max-width: 480px) {
+    .resultado-layout {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .resultado {
+        font-size: 32px;
+    }
+}

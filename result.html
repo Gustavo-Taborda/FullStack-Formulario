@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resultado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cartao cartao-resultado">
+        <h1>Resultado</h1>
+
+        <div class="resultado-layout">
+            <div class="info-lateral">
+                <h2 class="resultado-nome" id="nameLbl"></h2>
+                <h2 class="resultado-media" id="media"></h2>
+            </div>
+
+            <div class="resultado-destaque">
+                <h1 class="resultado" id="result"></h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let media = document.getElementById("media");
+        let result = document.getElementById("result")
+        let nameLabel = document.getElementById("nameLbl");
+        window.addEventListener("load", function() {
+            // código que só roda quando a página termina de carregar
+            let nameContent = localStorage.getItem("nomeLocal");
+            let resultado = localStorage.getItem("resultado");
+            let mediaValue = localStorage.getItem("media");
+            nameLabel.textContent = "Nome: " + nameContent;
+            media.textContent = "Média: " + mediaValue;
+            result.textContent = resultado;
+        });
+    </script>
+</body>
+</html>
